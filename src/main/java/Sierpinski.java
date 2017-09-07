@@ -48,6 +48,12 @@ public class Sierpinski {
 
     }
 
+
+    /**
+     * Write on file points of the sierpinski triangle and recursively get other triangles to be plotted
+     * @param triangle2D    A Sierpinski triangle
+     * @param level         The level of the triangle
+     */
     public static void generateSierpinski(final Triangle2D triangle2D, int level) {
 
         if (level > 0) {
