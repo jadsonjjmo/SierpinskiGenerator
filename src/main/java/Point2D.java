@@ -37,6 +37,6 @@ public class Point2D {
 
     @Override
     public String toString() {
-        return String.valueOf(this.getX()).replace(".", ",") + "\t" + String.valueOf(this.getY()).replace(".", ",");
+        return this.getX() + "\t" + this.getY();
     }
 }
