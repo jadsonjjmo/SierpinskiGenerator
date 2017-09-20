@@ -7,6 +7,7 @@ import java.util.Random;
 public class Sierpinski {
 
     private static BufferedWriter bufferedWriter;
+    private static long countPoints = 0;
 
     public static void main(final String[] args) {
 
@@ -56,6 +57,8 @@ public class Sierpinski {
             e.printStackTrace();
         }
 
+        System.out.println("Dataset generated successfully: " + countPoints + " points were stored!");
+
     }
 
 
@@ -70,6 +73,7 @@ public class Sierpinski {
         if (level >= 0) {
 
             try {
+                countPoints += 3;
                 bufferedWriter.write(triangle2D.toString());
             } catch (final IOException e) {
                 System.err.println("Failed to write on file!");
@@ -134,6 +138,7 @@ public class Sierpinski {
 
             //Write on buffer the actual seedPoint.
             try {
+                countPoints++;
                 bufferedWriter.write(seedPoint.toString());
                 bufferedWriter.newLine();
             } catch (final IOException e) {

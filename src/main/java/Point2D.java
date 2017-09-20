@@ -1,8 +1,11 @@
+import java.text.DecimalFormat;
+
 /**
  * @author Jadson Oliveira
  */
 public class Point2D {
 
+    private DecimalFormat decimalFormat = new DecimalFormat("0.00000000");
     private double x;
     private double y;
 
@@ -37,6 +40,11 @@ public class Point2D {
 
     @Override
     public String toString() {
-        return this.getX() + "\t" + this.getY();
+        String formattedDoubleX = decimalFormat.format(this.getX());
+        String formattedDoubleY = decimalFormat.format(this.getY());
+        formattedDoubleX = formattedDoubleX.replace(",", ".");
+        formattedDoubleY = formattedDoubleY.replace(",", ".");
+
+        return formattedDoubleX + "\t" + formattedDoubleY;
     }
 }
