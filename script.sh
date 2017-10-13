@@ -4,4 +4,4 @@ mvn clean compile assembly:single
 # number of levels = 9
 # number of points = 100000
 # mode = fixed/random
-java -jar target/SierpinskiGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar sierpinski_dataset.csv 100000 random
+java -jar target/SierpinskiGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar sierpinski_dataset.csv 100000000 random

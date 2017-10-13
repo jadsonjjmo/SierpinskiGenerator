@@ -45,6 +45,6 @@ public class Point2D {
         formattedDoubleX = formattedDoubleX.replace(",", ".");
         formattedDoubleY = formattedDoubleY.replace(",", ".");
 
-        return formattedDoubleX + "\t" + formattedDoubleY;
+        return formattedDoubleX + " " + formattedDoubleY;
     }
 }
